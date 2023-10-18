@@ -1,0 +1,1045 @@
+@charset "UTF-8";
+/*!
+ * Wedding Card Design Builder by Stephanus Dai
+ * @author   : Stephanus Bagus Saputra
+ *             ( 戴 Dai 偉 Wie 峯 Funk )
+ * @email    : wiefunk@stephanusdai.web.id
+ * @contact  : http://t.me/wiefunkdai
+ * @support  : http://opencollective.com/wiefunkdai
+ * @link     : http://www.stephanusdai.web.id
+ * Copyright (c) ID 2023 Stephanus Bagus Saputra. All rights reserved.
+ * Terms of the following https://stephanusdai.web.id/p/license.html
+ */
+*,::after,::before {
+    box-sizing: border-box;
+}
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI","Roboto","Helvetica Neue","Noto Sans","Liberation Sans","Arial","sans-serif";
+    font-size:  1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+header {
+    background-color: #666;
+    overflow: hidden;
+    padding: 0.5rem 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+footer {
+    border-top: 1px solid #dee2e6 !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    margin-top: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+    align-items: center !important;
+    text-align: center !important;
+    color: rgba(33, 37, 41, 0.75) !important;
+}
+
+.container {
+    width: 100%;
+    padding-right: calc(1.5rem * .5);
+    padding-left: calc(1.5rem * .5);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+.navbar > .container {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-title {
+    display: flex !important;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+    align-items: center !important;
+}
+.navbar-title .caption {
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.9);
+    margin-left: 0.5rem;
+}
+
+.navbar-title .logo {
+    margin-top: 0.25rem;
+    width: 1.25em;
+    height: 1.25em;
+    display: inline-block;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.navbar-title .logo.sdailover {
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xml%3Aspace%3D%22preserve%22%20width%3D%2230%22%20height%3D%2230%22%20style%3D%22shape-rendering%3AgeometricPrecision%3Btext-rendering%3AgeometricPrecision%3Bimage-rendering%3AoptimizeQuality%3Bfill-rule%3Aevenodd%3Bclip-rule%3Aevenodd%22%3E%3Cdefs%3E%3Cstyle%3E.fil0%2C.fil1%7Bfill%3A%23fefefe%7D.fil0%7Bfill-rule%3Anonzero%7D%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22Layer_x0020_1%22%3E%3Cg%20id%3D%22_3186391632896%22%3E%3Cpath%20d%3D%22M5.73%2022.77c16.74-9.44%209.9-16.66%203.96-14.38-1.92.74-2.6.18-2.48-.65.24-1.64%203.34-3.55%205.85-4.01%206.4-1.17%209.33%205.56%205.58%2011.67-2.67%204.34-7.98%205.56-12.91%207.37z%22%20class%3D%22fil0%22%2F%3E%3Cpath%20d%3D%22M9.46%204.25c-6.44%203.14-3.54%205.62-.86%207.36%201.7%201.11%202.49%202.37%202.58%203.66.4%205.56-6.99%204.88-10.01%2011.94-1.36-3.57%206.65-8.73%202.21-12.32C-.89%2011.43.27%204.07%209.46%204.25z%22%20class%3D%22fil0%22%2F%3E%3Cpath%20d%3D%22M5.55%203.78C13.37.73%2019.14.89%2022.76%202.82c1.98%201.06.82.45%202.28-.75.93-.77%202.33-.81%203.96-.09-2.87%201.73-2.6%204.49-2.49%205.16.52%203.47-.65%207.48-4.21%2010.89-4.36%204.17-13.19%203.85-20.99%2010.55%204.11-5.04%2011.63-7%2017.04-9.93%204.14-2.25%204.78-6.25%204.87-8.88.22-6.4-6.8-8.99-17.67-5.99zm20.33-1.34c.15-.09.31-.05.34.08.03.13-.07.3-.23.38-.15.09-.31.05-.34-.08-.03-.13.07-.3.23-.38z%22%20class%3D%22fil1%22%2F%3E%3Cpath%20d%3D%22M29%201.98c-1.23%201.2-1.04%202.79-.6%204.58%202.44%2010.01-6.58%2015.05-13.72%2015.62%206.35-1.41%2015.07-5.82%2013.1-15.03-.45-2.09-.44-3.94%201.22-5.17z%22%20class%3D%22fil1%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+
+.navbar-title .logo.stephanusdai {
+    width: 2em!important;
+    height: 2em!important;
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xml%3Aspace%3D%22preserve%22%20width%3D%2230%22%20height%3D%2230%22%3E%3Cdefs%3E%3CclipPath%20id%3D%22h%22%20clipPathUnits%3D%22userSpaceOnUse%22%3E%3Cpath%20d%3D%22M3.6%206.64a3.323%203.323%200%201%200%200-6.647%203.323%203.323%200%200%200%200%206.647%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2FclipPath%3E%3CclipPath%20id%3D%22a%22%20clipPathUnits%3D%22userSpaceOnUse%22%3E%3Cpath%20d%3D%22M3.6%207.08a3.6%203.6%200%201%200%200-7.2%203.6%203.6%200%200%200%200%207.2%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2FclipPath%3E%3CclipPath%20id%3D%22c%22%20clipPathUnits%3D%22userSpaceOnUse%22%3E%3Cpath%20d%3D%22M3.6%206.64a3.323%203.323%200%201%200%200-6.647%203.323%203.323%200%200%200%200%206.647%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2FclipPath%3E%3CclipPath%20id%3D%22d%22%20clipPathUnits%3D%22userSpaceOnUse%22%3E%3Cpath%20d%3D%22M3.6%206.64a3.323%203.323%200%201%200%200-6.647%203.323%203.323%200%200%200%200%206.647%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2FclipPath%3E%3CclipPath%20id%3D%22e%22%20clipPathUnits%3D%22userSpaceOnUse%22%3E%3Cpath%20d%3D%22M3.6%206.64a3.323%203.323%200%201%200%200-6.647%203.323%203.323%200%200%200%200%206.647%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2FclipPath%3E%3CclipPath%20id%3D%22f%22%20clipPathUnits%3D%22userSpaceOnUse%22%3E%3Cpath%20d%3D%22M3.6%206.64a3.323%203.323%200%201%200%200-6.647%203.323%203.323%200%200%200%200%206.647%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2FclipPath%3E%3CclipPath%20id%3D%22g%22%20clipPathUnits%3D%22userSpaceOnUse%22%3E%3Cpath%20d%3D%22M3.6%206.64a3.323%203.323%200%201%200%200-6.647%203.323%203.323%200%200%200%200%206.647%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2FclipPath%3E%3CclipPath%20id%3D%22b%22%20clipPathUnits%3D%22userSpaceOnUse%22%3E%3Cpath%20d%3D%22M3.6%207.08a3.6%203.6%200%201%200%200-7.2%203.6%203.6%200%200%200%200%207.2%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2FclipPath%3E%3CclipPath%20id%3D%22i%22%20clipPathUnits%3D%22userSpaceOnUse%22%3E%3Cpath%20d%3D%22M3.6%206.64a3.323%203.323%200%201%200%200-6.647%203.323%203.323%200%200%200%200%206.647%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2FclipPath%3E%3CclipPath%20id%3D%22j%22%20clipPathUnits%3D%22userSpaceOnUse%22%3E%3Cpath%20d%3D%22M3.6%206.64a3.323%203.323%200%201%200%200-6.647%203.323%203.323%200%200%200%200%206.647%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2FclipPath%3E%3CclipPath%20id%3D%22k%22%20clipPathUnits%3D%22userSpaceOnUse%22%3E%3Cpath%20d%3D%22M3.6%206.64a3.323%203.323%200%201%200%200-6.647%203.323%203.323%200%200%200%200%206.647%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2FclipPath%3E%3CclipPath%20id%3D%22l%22%20clipPathUnits%3D%22userSpaceOnUse%22%3E%3Cpath%20d%3D%22M3.6%206.64a3.323%203.323%200%201%200%200-6.647%203.323%203.323%200%200%200%200%206.647%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2FclipPath%3E%3CclipPath%20id%3D%22m%22%20clipPathUnits%3D%22userSpaceOnUse%22%3E%3Cpath%20d%3D%22M3.6%206.64a3.323%203.323%200%201%200%200-6.647%203.323%203.323%200%200%200%200%206.647%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2FclipPath%3E%3CclipPath%20id%3D%22n%22%20clipPathUnits%3D%22userSpaceOnUse%22%3E%3Cpath%20d%3D%22M3.6%206.64a3.323%203.323%200%201%200%200-6.647%203.323%203.323%200%200%200%200%206.647%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M3.6%206.64a3.323%203.323%200%201%200%200-6.647%203.323%203.323%200%200%200%200%206.647zm3.6-3.16a3.6%203.6%200%201%201-7.2%200%203.6%203.6%200%200%201%207.2%200%22%20clip-path%3D%22url%28%23a%29%22%20style%3D%22fill%3A%23fff%3Bfill-opacity%3A1%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%22%20transform%3D%22matrix%283.88889%200%200%20-3.88889%201.001%2028.533%29%22%2F%3E%3Cpath%20d%3D%22M3.6%206.64a3.323%203.323%200%201%200%200-6.647%203.323%203.323%200%200%200%200%206.647%22%20clip-path%3D%22url%28%23b%29%22%20style%3D%22fill%3Anone%3Bfill-opacity%3A1%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%22%20transform%3D%22matrix%283.88889%200%200%20-3.88889%201.001%2028.533%29%22%2F%3E%3Cpath%20d%3D%22M4.018%204.067A.543.543%200%200%200%204.088%204c-.026.106-.28.246-.4.24-.076-.004-.127-.037-.127-.037l.021-.032c.079-.118.197-.182.436-.104Zm-.326.12c-.028-.048.005-.11.06-.11.044%200%20.076.04.069.084a.559.559%200%200%200%20.196-.094c-.204-.052-.356.001-.4.109.022.01.048.013.075.01%22%20clip-path%3D%22url%28%23c%29%22%20style%3D%22fill%3A%23fff%3Bfill-opacity%3A1%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%22%20transform%3D%22matrix%283.88889%200%200%20-3.88889%201.001%2028.533%29%22%2F%3E%3Cpath%20d%3D%22M3.175%203.24c-.055.024-.075.039-.135.032-.112-.013-.097.042-.198.07a1.06%201.06%200%200%201-.1.024c-.042.005-.083-.001-.113.033-.015.018-.04.056-.069.084a.482.482%200%200%201%20.076-.164c.044-.071.081-.16.113-.236.132-.317.444-.211.583-.095.061.052.233.051.267.168-.203-.04-.313.033-.424.083Zm-.324-.04c.045-.011.093-.046.117-.052.025-.006.067.01.112.001.091-.017.12-.048.164-.059a.506.506%200%200%201%20.24.014%201.02%201.02%200%200%200-.495-.102c-.136.006-.218.117-.313.299.083-.055.098-.084.175-.102%22%20clip-path%3D%22url%28%23d%29%22%20style%3D%22fill%3A%23fff%3Bfill-opacity%3A1%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%22%20transform%3D%22matrix%283.88889%200%200%20-3.88889%201.001%2028.533%29%22%2F%3E%3Cpath%20d%3D%22M3.04%203.38c.066-.006.095.045.175.016.068-.025.082-.065.12-.062.055.003.208.054.106.295.05-.19-.051-.212-.11-.204-.062.008-.091.098-.166.124-.047.017-.056.01-.074-.008-.054-.056-.118-.046-.156.026-.007.013-.006.02-.018.032-.03.03-.058.03-.117.022-.058-.007-.153.088.117.197-.328-.102-.164-.211-.164-.255%200-.096.108-.009.178-.087.033-.037.068-.09.11-.095%22%20clip-path%3D%22url%28%23e%29%22%20style%3D%22fill%3A%23fff%3Bfill-opacity%3A1%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%22%20transform%3D%22matrix%283.88889%200%200%20-3.88889%201.001%2028.533%29%22%2F%3E%3Cpath%20d%3D%22M4.603%203.946c.001.015.017.065.017.065l-.23.025-.063.022c-.07.024-.073.043-.13.073-.067.036-.169.072-.29.116-.132.047-.31.088-.452.084-.213-.006-.163-.051-.362.095-.16.116-.354.198-.551.221-.022.003-.087.007-.087.007h-.172c-.028%200-.021-.025-.021-.057%200-.023.046-.029.045-.055l-.009-.185c-.007-.144.043-.201.131-.252.14-.08.229-.1.382-.124.083-.012.145-.005.223.083l.13.147c.027.03.055.066.116.031.022-.013.023-.02.026-.057l.014-.192c.012-.146.095-.204.215-.248.12-.044.224-.077.352-.092.088-.01.187-.019.23.07l.095.193c.042.085.028.073.146.04Zm-.453.16c.035-.017.05-.07.03-.139-.031-.1-.04-.135-.092-.22-.041-.065-.113-.072-.229-.054-.108.016-.27.06-.367.11-.071.037-.096.075-.08.153.023.117.024.155-.033.258-.028.05.03.07.057.072.234.024.513-.084.714-.18Zm-1.106.298c.045-.039.064-.077.04-.135a1.215%201.215%200%200%200-.102-.182c-.051-.074-.094-.082-.164-.073a.83.83%200%200%200-.38.128.396.396%200%200%200-.077.063c-.05.059-.038.175-.031.266.01.133.02.113.104.12.007%200%20.066.026.09.023.073-.006.175-.042.276-.083.057-.023.176-.07.244-.127%22%20clip-path%3D%22url%28%23f%29%22%20style%3D%22fill%3A%23fff%3Bfill-opacity%3A1%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%22%20transform%3D%22matrix%283.88889%200%200%20-3.88889%201.001%2028.533%29%22%2F%3E%3Cpath%20d%3D%22M3.011%204.306Zm-.356.167c.013-.13.138-.229.323-.178l.033.01c.007.004.011.009.011.015.007.122-.08.14-.17.16a.752.752%200%200%201-.168.015.1.1%200%200%201-.073-.03c.018.008.032.008.044.008Zm.158-.116c.045%200%20.073.048.054.088.087-.023.122-.047.108-.145-.182-.019-.293.077-.32.173a.87.87%200%200%200%20.117-.01c-.04-.037-.014-.106.04-.106%22%20clip-path%3D%22url%28%23g%29%22%20style%3D%22fill%3A%23fff%3Bfill-opacity%3A1%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%22%20transform%3D%22matrix%283.88889%200%200%20-3.88889%201.001%2028.533%29%22%2F%3E%3Cpath%20d%3D%22M3.604%204.346c.095-.011.129.034.219.018.138-.026.44-.11.484-.233%200%20.145-.27.262-.517.32-.094.022-.306%200-.393-.11.091.016.15.01.208.004%22%20clip-path%3D%22url%28%23h%29%22%20style%3D%22fill%3A%23fff%3Bfill-opacity%3A1%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%22%20transform%3D%22matrix%283.88889%200%200%20-3.88889%201.001%2028.533%29%22%2F%3E%3Cpath%20d%3D%22M4.823%203.41c-.085-.085-.103-.027-.149-.065-.024-.02%200-.07.031-.033.01.01.016.015.038.015.011%200%20.08.083.08.083%22%20clip-path%3D%22url%28%23i%29%22%20style%3D%22fill%3A%23fff%3Bfill-opacity%3A1%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%22%20transform%3D%22matrix%283.88889%200%200%20-3.88889%201.001%2028.533%29%22%2F%3E%3Cpath%20d%3D%22M2.77.098c.012.224.046.53.01.73-.008.042.024.077.049.108.062.078.172.196.217.275-.092.108-.15.228-.209.354l-.042.013a1.05%201.05%200%200%201-.345-.21c.004-.08-.003-.16.007-.237.01-.076.006-.116-.045-.176-.068-.082-.21-.411-.266-.53L2.114.343%202.068.221%202.034.135l-.05-.131-.105-.344-.004-.034-.082-.553c-.018-.097-.036-.196-.049-.294-.011-.088-.017-.18-.024-.27l-.029-.407c-.007-.101-.014-.275-.02-.376h.152c.015.192.14.534.208.682.069.151.146.305.204.46.147.392.324.744.5%201.116l.033.069.002.045%22%20clip-path%3D%22url%28%23j%29%22%20style%3D%22fill%3A%23fff%3Bfill-opacity%3A1%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%22%20transform%3D%22matrix%283.88889%200%200%20-3.88889%201.001%2028.533%29%22%2F%3E%3Cpath%20d%3D%22M3.324%201.009S3.04.434%202.91.179a9.318%209.318%200%200%201-.606-1.336c-.122-.325-.442-.876-.405-1.117.262.386.494.838.779%201.23.109.15.239.295.334.452.057.093.211.285.372.478l.09.11c.16.189.307.36.353.416.074.089.22.22.295.286.078.068.036.1.006.206-.021.073-.05.139-.082.207-.08.371-.167.616-.047%201a1.616%201.616%200%200%201-.106-.367c-.03-.2.093-.671.167-.845.022-.05-.014-.094-.05-.123a36.708%2036.708%200%200%201-.605-.597A3.2%203.2%200%200%201%203.253.01a9.846%209.846%200%200%201-.09-.105C3.044-.24%202.923-.39%202.88-.44c-.072-.087-.502-.706-.502-.706A13.789%2013.789%200%200%201%203.045.04c.284.567.5%201.11.447%201.304z%22%20clip-path%3D%22url%28%23k%29%22%20style%3D%22fill%3A%23fff%3Bfill-opacity%3A1%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%22%20transform%3D%22matrix%283.88889%200%200%20-3.88889%201.001%2028.533%29%22%2F%3E%3Cpath%20d%3D%22M.904-.865C.914-.36.953.427%201.01.979l.02.184.006.04c.031.234.08.5.145.698-.127-.18-.189-.414-.224-.6l-.02-.125-.015-.103a19.08%2019.08%200%200%201-.174-1.57c-.06.2-.116.641-.153.96-.006-.227%200-.87.141-1.175a18.215%2018.215%200%200%201-.008-.25l-.227.1.225-.201v-.298c-.346.07-.539.223-.539.521-.106-.32.26-.575.54-.637.002-.118.006-.243.01-.363a.878.878%200%200%200-.207-.055c-.066%200-.335-.08-.292-.102.038-.02.158.024.313.014.06-.003.138-.057.196-.066.005-.087.01-.164.017-.225h.2c.018.051-.073.728-.06%201.409%22%20clip-path%3D%22url%28%23l%29%22%20style%3D%22fill%3A%23fff%3Bfill-opacity%3A1%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%22%20transform%3D%22matrix%283.88889%200%200%20-3.88889%201.001%2028.533%29%22%2F%3E%3Cpath%20d%3D%22M5.385.353a14.066%2014.066%200%200%201-.3-1.222c-.017-.08-.06-.46-.087-.488-.048-.048-.1-.075-.1-.125%200-.039-.03-.084-.06-.13-.058-.087.073-.065.095-.043.021.022.08.109.094.087.015-.021.08-.174.095-.21.014-.037.073-.146.095-.175.021-.03.029-.095.021-.117a1.389%201.389%200%200%200-.182-.175c-.008-.007-.012-.017-.013-.029h.131c.007.003.191.16.217.211.062.125.25-.039.219.153-.008.044-.139.051-.197.102-.058.051-.065.124-.08.182-.015.058-.08.131-.175.16-.094.03-.022.11-.007.16.008.03.005.088.002.155-.008.263.085.512.136.77a61.603%2061.603%200%200%200%20.193.792%204.526%204.526%200%200%200%20.142.416c.071.142.157.464.269.56-.134.017-.342-.536-.442-.831L5.398.397%205.385.353%22%20clip-path%3D%22url%28%23m%29%22%20style%3D%22fill%3A%23fff%3Bfill-opacity%3A1%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%22%20transform%3D%22matrix%283.88889%200%200%20-3.88889%201.001%2028.533%29%22%2F%3E%3Cpath%20d%3D%22m1.583%201.21-.129-.128.129.127Zm.837%203.256c-.006-.044.009-.08.013-.106.003-.026.007-.031-.012-.067-.018-.036-.06-.087-.06-.088%200%200%20.038.028.068.064.046.057.017.122.019.137.014.07.08.084.06.147-.005.022-.01.05.03.095.025.027.028.049.037.067l.008.009c.018-.02.042-.013.068-.019.15-.032.283-.08.367-.181.036-.043.102-.088.153-.124-.024.166-.094.27-.229.307a1.07%201.07%200%200%201-.347.035.075.075%200%200%201%20.009.03c.027.089.058.186.07.273.02.048.062.106.073.146.026.09.03.122.11.194l.003.002c.03.03.082.057.076.004-.002-.012-.007-.018-.013-.025-.032-.042-.004-.055.04-.043.035.01.054.038.09.044.061.01.13-.035.174-.105-.024.069-.135.154-.208.115.013.009.026.017.037.02.05.016.092.02.136.008.113-.131.156-.299.465-.41a.659.659%200%200%200-.375.366c.15-.1.175-.194.387-.264-.214.087-.245.194-.383.286-.02.013-.016.004-.028.048a.758.758%200%200%201%20.056-.024.44.44%200%200%200-.023.046c.144-.058.3-.17.373-.236-.054.055-.205.19-.38.256a.15.15%200%200%200-.009.036.848.848%200%200%200%20.372-.245c-.07.116-.226.216-.371.267.042.035.345-.055.355-.204.015.03-.015.103-.07.156.064-.034.097-.13.112-.196.022-.099.019-.208.015-.33-.002-.11.14-.26.23-.319a.862.862%200%200%201%20.32-.118.522.522%200%200%201%20.026-.068c.056-.113.159-.24.28-.129-.136-.048-.193.054-.214.183.08-.01.162-.013.238-.013-.086.01-.167.021-.241.038a.86.86%200%200%200-.005.053.414.414%200%200%201%20.208.011.573.573%200%200%200-.209.006.789.789%200%200%200-.001.057.502.502%200%200%201%20.108-.023.694.694%200%200%200-.108.032l.001.036c.008.163-.006.054.105.006.225-.095.248-.414.21-.646L4.62%204.01s-.016-.05-.017-.065a.405.405%200%200%200-.003-.024.339.339%200%200%201-.06-.2%202.485%202.485%200%200%200-.035-.085c-.12-.28-.289-.293-.497-.445-.161-.118-.101-.315-.247-.451-.143-.134-.407-.16-.59-.117-.021.005-.108.096-.203.131-.136.05-.18-.03-.277.067-.13.13-.15.386-.236.61-.064.164-.031.31-.08.433-.067.165.032.233-.023.298-.01-.034%200-.067-.012-.102-.02-.057-.013-.075-.013-.138%200-.075.034-.094.034-.21%200-.035.005-.09.015-.109.01-.02%200-.059.01-.088.01-.03.025-.078.04-.118.025-.069.054-.233.078-.303.014-.044.024-.084.039-.118l.059-.137c.014-.034.044-.073.044-.073v-.145.002c-.053-.025-.07-.076-.082-.115a28.134%2028.134%200%200%200-.114-.1c-.04-.034-.138-.127-.138-.127s-.102-.02-.18-.04c-.08-.02-.113-.02-.192-.039-.078-.02-.127-.039-.191-.049-.064-.01-.152-.014-.22-.034-.069-.02-.147-.049-.191-.064-.044-.014-.142-.068-.187-.088-.044-.02-.147-.088-.186-.108-.039-.02-.068-.049-.093-.054C.848%201.801.79%201.801.77%201.782.757%201.77.722%201.736.694%201.704a.22.22%200%200%201-.037-.054c-.015-.04-.025-.064-.03-.093l-.016-.085a2.187%202.187%200%200%201-.023-.146c-.007-.07-.04-.255-.03-.304C.563.998.573.988.568.968.565.95.535.89.516.851.494.811.484.773.474.743.465.713.436.679.426.65.416.62.421.61.406.586.393.562.368.498.354.464.338.429.343.39.333.371.323.35.294.337.294.307s0-.04-.015-.054C.264.24.28.204.27.184.26.166.24.142.236.101a.408.408%200%200%200-.068-.186C.152-.109.152-.119.127-.188.104-.256.079-.305.065-.368.049-.434.029-.478.024-.527A.315.315%200%200%200%200-.639c-.043-.085-.014-.126-.025-.2-.004-.035-.034-.069-.038-.113-.006-.044-.025-.054-.03-.098-.016-.14-.009-.129-.044-.27-.01-.039-.015-.102-.02-.141-.005-.04-.03-.094-.034-.133-.005-.039-.044-.108-.044-.147%200-.04.005-.093%200-.137-.005-.044-.015-.103-.005-.152.01-.049.025-.112.03-.167a.303.303%200%200%200-.007-.077h.074c.015.096-.006.16-.026.258-.007.038.002.092.006.13.005.042.002.083%200%20.125.179.084.404.186.51.186.16%200%20.255-.014.35-.095-.024.106-.316.162-.531.386-.077.08-.097.197-.157.324-.003.013.032.068.039.11.01.079-.015.114.017.179.027.053.026.097.034.15.007.044.025.091.036.135.013.06.04.117.061.174.093-.606.188-.846.479-.985C.413-1.05.296-.454.26-.067c0%200%20.035.065.046.16.003.021.018.04.028.059.013.027.01.043.01.066a.125.125%200%200%201%20.022.08C.372.314.402.31.412.404c.002.01.003.022.007.031C.435.47.45.518.47.55c.032.054.005.048.043.11.048.079.034.094.066.16.029.055.072.124.062.18-.01.052-.016.006-.007.105l.026.215c.002.023.006.046.01.069l.029.156c.004.027.016.055.026.08a.06.06%200%200%200%20.007.012c.019.026.062.068.083.089.018.005.054.006.071.01.045.009.073.04.112.06l.183.107.18.085c.062.02.124.045.188.063.066.019.142.022.211.032.067.01.132.034.198.05l.203.043-.147-.104s-.102-.022-.196-.131c-.095-.109-.226-.218-.284-.27-.058-.05-.146-.108-.171-.126-.064-.046-.025-.075-.004-.179.011-.054.095-.284.095-.284L1.287.93%201.214.863v-.08c.003-.118.007-.334.007-.422%200-.124.036-.764.05-.939.036-.418.11-.843.146-1.332.01-.12.017-.242.024-.364h.152c.024.364.059.905.08%201.063.024.196.099.534.13.844.026.257.034.503.05.697.005.054.01.103.017.148.006.04.012.076.02.108.022.088.139.597.16.677.022.08.103.32.131.386.03.065.197.393.197.393-.107-.29-.175-.536-.276-.837.288.137.298.31.713.458.016-.035.033-.028.061-.01.07-.148.113-.246.19-.35.038-.051.093-.107.15-.167.053-.058.096-.069.116-.033a1.816%201.816%200%200%200%20.16.24l.001.002.043.046a.866.866%200%200%201%20.094.134c.032.059.08.114.12.175.044.07.08.144.117.215.03.06.065.108.1.155l.055.074a1.642%201.642%200%200%200-.024-.033c-.12-.384-.033-.629.047-1l.017-.038a101.525%20101.525%200%200%200%20.296.11c.094.036.153.073.19.095.035.022.057.036.039.102-.018.065-.047.269-.062.35l-.105.437c.035-.022.026-.028.054-.04.07-.031.147-.064.215-.1.126-.069.238-.132.373-.185.135-.052.422-.162.54-.23a.973.973%200%200%200%20.29-.226c.015-.007.013-.038.107-.047l.054-.054c-.034-.01-.105-.103-.16-.211a3.163%203.163%200%200%201-.117-.27c-.039-.1-.068-.183-.08-.21a4.502%204.502%200%200%201-.022-.057c-.132-.33-.237-.673-.378-1.035.075.165.257.53.4.837.06.125.111.241.15.328.035.074.06.126.076.145.069.081.17.12.239.143l.002-.004a.559.559%200%200%201%20.04-.061C6.216.874%206.098.636%206.193.52c-.008.11.058.277.073.255l.099-.125.026-.073S6.308.303%206.2.201c-.11-.102-.467-.51-.467-.51s-.218-.203-.247-.262c-.03-.058-.24-.233-.24-.233s.145.03.21.102c.066.073.139.16.219.233.08.073.291.313.378.393.088.08.16.175.226.19.024.004.582-.634-.546-1.398C6.89-.636%206.38.23%206.388.296c.015.101.077.135.077.135l-.06.118c.092-.17.066-.13.102-.29l.048-.206c.026-.146.029-.275.04-.423.012-.138.064-.274.095-.408.022-.09.045-.181.07-.271.068-.257.055-.207.086-.465l.029-.379.046-.34a.158.158%200%200%200%20.002-.04h.073c0%20.02%200%20.04-.004.057-.015.064-.045.26-.045.323l-.059.627c-.01.054-.038.162-.058.236-.02.073-.044.166-.069.27-.024.102-.083.274-.093.396l-.024.318a1.794%201.794%200%200%201-.04.216%202.352%202.352%200%200%200-.049.22.932.932%200%200%201-.088.196c-.03.054-.03.079-.039.098-.01.02-.074.089-.103.133-.03.044-.03.073-.064.117a.446.446%200%200%200-.068.128c-.01.034-.03.039-.024.083a.323.323%200%200%201%200%20.063.165.165%200%200%201-.03.089c-.03.034-.074.083-.098.103-.025.019-.064.005-.083.024-.132.131-.14.145-.319.25a2.627%202.627%200%200%201-.323.147c-.201.083-.21.078-.328.132-.118.054-.201.103-.265.138-.063.034-.22.102-.22.102s-.03.03-.06.044l-.072.04s-.084.103-.094.132c-.018.055-.074.17-.127.206-.026.017-.033.019-.038.032a1.46%201.46%200%200%200-.016.11l.059.122c.014.03.132.216.152.25.02.034.058.088.073.108.015.02.034.024.04.005.004-.02.019-.059.039-.074.02-.014.044-.049.078-.049s.074.005.113.04c.083.073.15.157.22.24.03.034.088.088.113.112a.64.64%200%200%201%20.103.138c.02.043.029.068.029.127%200%20.058-.01.078-.024.098-.015.02-.054.068-.084.068-.03%200-.102-.004-.103-.004.053.035.023.07.06.097.019.015.019.054.029.069l.107.138c.02.015.044.028.06.053.024.04.078.181.087.24.1.593-.279%201.435-.896%201.599l-.083.018c-.124.02-.206-.03-.378.005-.161.032-.532.131-.712.024-.12-.071-.045-.106-.081-.166-.075-.125-.047-.002-.133-.216-.026-.067-.145-.182-.171-.304-.02-.088-.086-.208-.116-.284l-.036-.137-.036-.179c-.008-.037-.018-.077-.019-.114-.001-.016-.002-.029-.014-.04-.02-.02-.015-.03-.054-.04-.026-.006-.051-.033-.063-.047-.027-.034-.014-.068-.011-.113%200%200-.02-.03-.024-.075zM1.583%201.21zm.795.832c-.383-.487-.55-.975-.636-1.482L1.72.41c-.078-.568-.071-1.161-.164-1.802C1.48-.777%201.435-.09%201.49.562a5.728%205.728%200%200%200%20.093.648c.055.053.11.106.133.126.05.044.24.298.298.364.058.065.364.342.364.342Zm1.78%202.54c-.047.02-.15.084-.167.164a.548.548%200%200%201%20.224-.134.89.89%200%200%201%20.012-.055%201.064%201.064%200%200%200-.07.024Zm-.153-1.873c-.023-.08-.042-.168-.135-.238-.04-.029-.355-.252-.604-.436-.117-.087-.206-.166-.271-.221-.028.032-.101.053-.151.065-.004.073-.004.156-.007.192-.015.14-.082.213-.124.357a1.4%201.4%200%200%200-.029.281.294.294%200%200%201%20.145-.107c.062-.024.152-.049.233-.065.128-.026.236-.026.365-.015.221.02.371.08.578.187Zm-.838%202.723c-.106.017-.161-.041-.136.014.022.025.067.043.073.04a.457.457%200%200%200%20.063-.054Zm1.044-.801c-.094.034-.179.091-.216.176a.323.323%200%200%201%20.192-.142.379.379%200%200%200-.194.185c.04-.063.064-.093.117-.118-.054.043-.07.069-.08.103a.463.463%200%200%201%20.167-.127l.014-.077Zm-.017.1a.613.613%200%200%200-.173.169c-.002.026%200%20.047.013.035a.378.378%200%200%200%20.097-.14c-.006.045-.06.242-.144.22.085.08.173-.197.18-.255.005.077-.039.176-.073.256a.679.679%200%200%200%20.1-.284ZM.045-1.21c.03-.034.053-.127.12-.211%200%200-.16-.131-.21-.16a.674.674%200%200%201-.083-.06l.023.092c.035.11.018.131.038.213l.032.146c.029.005.055.01.08-.02zM5.932.949a.57.57%200%200%200%20.084.175c.01.014.054.068.074.11.013-.043.003-.076.005-.112a.139.139%200%200%201%20.016-.057l.023-.055A1%201%200%200%201%205.93.921c-.004-.002-.003.01.002.028Zm-1.53%202.337H4.4h.002zm.267-.077a.172.172%200%200%200-.126-.06c-.035%200-.083.047-.098.083-.013.033-.029.057-.043.054l-.01.015c.089.072.117.085.132.08.017-.01.023-.038.081-.022.032.01.042.059.087.07.046.01.112.05.128.1.05.125-.097.09.016.29.002.004.037.068.064.068.036%200%20.102.015.138%200%20.01-.01.014-.022.004-.032-.053.014-.095-.052-.08-.117.042-.191-.127-.25-.132-.347l-.161-.182%22%20clip-path%3D%22url%28%23n%29%22%20style%3D%22fill%3A%23fff%3Bfill-opacity%3A1%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%22%20transform%3D%22matrix%283.88889%200%200%20-3.88889%201.001%2028.533%29%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.navbar-menu {
+    float: right;
+    font-size: 1.25rem;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.65);
+    background-color: transparent;
+    border-radius: 0.375rem;
+    transition: box-shadow 0.15s ease-in-out;
+    margin-right: -0.5rem;
+}
+
+.navbar-link {
+    background-color: transparent;
+    border-width: 0;
+    cursor: pointer;
+    display: block;
+    float: left;
+    text-align: center;
+    padding: 0.25rem 0.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .navbar-link {
+        transition: none;
+    }
+}
+
+.navbar-link:hover {
+    text-decoration: none;
+}
+
+.navbar-link:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem;
+}
+
+.navbar-link-icon {
+    display: inline-block;
+    width: 1.25em;
+    height: 1.25em;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.navbar-link-icon.opencollective {
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2230%22%20height%3D%2230%22%20fill-rule%3D%22evenodd%22%20viewBox%3D%220%200%2064%2064%22%3E%3Cpath%20d%3D%22M52.402%2031.916c0%204.03-1.17%207.895-3.178%2011.087l8.196%208.23c4.014-5.375%206.523-12.094%206.523-19.318s-2.51-13.942-6.523-19.318l-8.196%208.23c2.007%203.192%203.178%206.887%203.178%2011.087z%22%20fill%3D%22%23fff%22%2F%3E%3Cpath%20d%3D%22M32.004%2052.41c-11.207%200-20.406-9.24-20.406-20.493s9.2-20.493%2020.406-20.493c4.182%200%207.86%201.176%2011.04%203.36l8.196-8.23C45.887%202.52%2039.197%200%2032.004%200%2014.44%200%20.057%2014.278.057%2032.084S14.44%2064%2032.004%2064c7.36%200%2014.05-2.52%2019.403-6.55l-8.196-8.23c-3.178%202.016-7.025%203.192-11.207%203.192z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.navbar-link-icon.github {
+    background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2230%22%20height%3D%2230%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2098%2096%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M48.854%200C21.839%200%200%2022%200%2049.217c0%2021.756%2013.993%2040.172%2033.405%2046.69%202.427.49%203.316-1.059%203.316-2.362%200-1.141-.08-5.052-.08-9.127-13.59%202.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015%204.934.326%207.523%205.052%207.523%205.052%204.367%207.496%2011.404%205.378%2014.235%204.074.404-3.178%201.699-5.378%203.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283%200-5.378%201.94-9.778%205.014-13.2-.485-1.222-2.184-6.275.486-13.038%200%200%204.125-1.304%2013.426%205.052a46.97%2046.97%200%200%201%2012.214-1.63c4.125%200%208.33.571%2012.213%201.63%209.302-6.356%2013.427-5.052%2013.427-5.052%202.67%206.763.97%2011.816.485%2013.038%203.155%203.422%205.015%207.822%205.015%2013.2%200%2018.905-11.404%2023.06-22.324%2024.283%201.78%201.548%203.316%204.481%203.316%209.126%200%206.6-.08%2011.897-.08%2013.526%200%201.304.89%202.853%203.316%202.364%2019.412-6.52%2033.405-24.935%2033.405-46.691C97.707%2022%2075.788%200%2048.854%200z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.describ-card {
+    text-align: center !important;
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+}
+
+.describ-card .content {
+    margin-right: auto !important;
+    margin-left: auto !important;
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+    flex-shrink: 0;
+    width: 100%;
+    padding-right: calc(1.5rem * .5);
+    padding-left: calc(1.5rem * .5);
+    margin-top: 0;
+}
+
+@media (min-width: 768px) {
+    .describ-card .content {
+        flex: 0 0 auto;
+        width: 70%;
+    }
+}
+
+@media (min-width: 992px) {
+    .describ-card .content {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+}
+
+.describ-card h1 {
+    font-weight: 300 !important;
+    font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    line-height: 1.2;
+    color: inherit;
+}
+
+.describ-card p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: rgba(33, 37, 41, 0.75);
+}
+
+.design-packages {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+    text-align: center !important;
+}
+
+.design-packages .content {
+    background-color: rgba(248, 249, 250, 1) !important;
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+}
+
+.design-galleries-card {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+    margin-top: calc(-1 * 1rem);
+    margin-right: calc(-.5 * 1rem);
+    margin-left: calc(-.5 * 1rem);
+}
+
+.design-galleries-card > .item-card {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(1rem * 0.5);
+    padding-left: calc(1rem * 0.5);
+    margin-top: 1rem;
+}
+
+.design-galleries-card .item-card {
+    flex: 0 0 auto;
+}
+
+@media (min-width: 576px) {
+    .design-galleries-card > .item-card {
+        flex: 1 0 0%;
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .design-galleries-card > .item-card {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .design-galleries-card > .item-card {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+}
+
+.design-galleries-card .item-card .item-link {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    text-decoration: none;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.175);
+    border-radius: 0.375rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.design-galleries-card .item-card .caption {
+    display: none;
+}
+
+.design-galleries-card .item-card .item-link.active > .caption {
+    display: block;
+    background: #fff;
+    color: #212529;
+    padding: 0.5rem 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    border-radius: 0 0 0.375rem 0.375rem;
+    opacity: 0.5;
+}
+
+.design-galleries-card .item-card .item-link:hover > .caption,
+.design-galleries-card .item-card .item-link:active > .caption {
+    display: block;
+    background: #fff;
+    color: #212529;
+    padding: 0.5rem 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    border-radius: 0 0 0.375rem 0.375rem;
+    opacity: 0.5;
+}
+
+.design-galleries-card .item-card .box-shadow {
+    width: 100%;
+    height: 200px;
+    border-radius: 0.375rem;
+}
+
+.design-form-builder {
+    background-color: rgb(238, 240, 241);
+    position: relative;
+}
+
+.design-form-builder .design-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 0;
+    padding: 0;
+}
+
+.design-form-builder .design-switcher-panel {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.175);
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.design-form-builder .design-switcher {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 4.5rem;
+    overflow: hidden;
+}
+
+.design-form-builder .nav-switcher {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.design-form-builder .nav-switcher li button {
+    background-color: transparent;
+    border: transparent;
+}
+
+.design-form-builder .nav-switcher li button:hover {
+    background-color: #eee;
+}
+
+.design-form-builder .nav-switcher li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.design-form-builder .nav-switcher .nav-link {
+    border-right: 1px solid #dee2e6;
+    border-radius: 0;
+    display: block;
+    padding: 1rem;
+    color: #212529;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+.design-form-builder .nav-switcher .nav-link img {
+    width: 100%;
+    height: 2.5rem;
+}
+
+.design-form-builder .nav-switcher .nav-link.active {
+    color: #fff;
+    background-color: #666;
+}
+
+.design-form-builder .design-switcher-panel.expanded {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    top: 3.5rem;
+    margin: 0 auto;
+    z-index: 3;
+    overflow: hidden;
+}
+.design-form-builder .design-switcher-panel.expanded .design-switcher {
+    width: 100%;
+    height: 100%!important;
+    position: relative;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.design-form-builder .design-switcher-panel.expanded .nav-switcher {
+    display: list-item!important;
+    height: auto!important;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+    columns: 1;
+    -webkit-column-gap: 0;
+    -moz-column-gap: 0;
+    column-gap: 0;
+    list-style-position: inside;
+}
+
+.design-form-builder .design-switcher-panel.expanded .nav-switcher .nav-link {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.design-form-builder .design-switcher-panel.expanded .nav-switcher .nav-link img {
+    width: 100%!important;
+    height: auto!important;
+}
+
+.design-form-builder .design-switcher-panel .nav-toggle {
+    flex: 1;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 0.25rem;
+    color: #fff;
+    font-weight: bold;
+    font-size: 8px;
+    background: #666;
+    border: 1px solid #333;
+    border-left-color: #666;
+    border-radius: 0 3px 3px 0;
+    -moz-transition: width .1s linear,right .1s linear;
+    -o-transition: width .1s linear,right .1s linear;
+    -webkit-transition: width .1s linear,right .1s linear;
+    transition: width .1s linear,right .1s linear;
+}
+
+.design-form-builder .design-switcher-panel .nav-toggle::before {
+    content: "⇵";
+    text-align: center;
+    margin-left: -3px;
+}
+
+.design-form-builder .design-switcher-panel .nav-toggle:active {
+    background: #fff;
+    border: 1px solid #d7dde3;
+    border-left-color: #fff;
+    padding-left: 8px;
+    padding-right: 10px;
+    color: #333;
+}
+
+.design-form-builder .design-switcher-panel.expanded .nav-toggle {
+    padding: 0.5rem 0!important;
+    font-size: 18px!important;
+}
+@media (min-width: 576px) {
+    .design-form-builder {
+        padding: 0 1rem;
+    }
+    .design-form-builder .design-content {
+        background-clip: border-box;
+        border-left: 1px solid rgba(0, 0, 0, 0.175);
+        border-right: 1px solid rgba(0, 0, 0, 0.175);
+        box-shadow: 0.125rem 0 0.25rem rgba(0, 0, 0, 0.075);
+    }
+    .design-form-builder .design-switcher-panel.expanded .nav-switcher {
+        -webkit-columns: 2!important;
+        -moz-columns: 2!important;
+        columns: 2!important;
+    }
+}
+
+@media (min-width: 768px) {
+    .design-form-builder .design-switcher-panel.expanded .nav-switcher {
+        -webkit-columns: 3!important;
+        -moz-columns: 3!important;
+        columns: 3!important;
+    }
+}
+@media (max-width: 992px) {
+    .design-form-builder .design-switcher-panel.expanded {
+        max-width: 100%!important;
+    }
+    .design-form-builder .design-switcher-panel.expanded .design-switcher {
+        max-height: calc(100% - 6rem)!important;
+        padding-bottom: 0!important;
+    }
+    .design-form-builder .design-switcher-panel.expanded .nav-switcher .nav-link {
+        padding: 1rem 2rem!important;
+    }
+    body:has(.design-form-builder .design-switcher-panel.expanded) {
+        overflow: hidden!important;
+    }
+}
+@media (min-width: 992px) {
+    .design-form-builder {
+        padding: 3rem 1rem;
+    }
+    .design-form-builder .design-content {
+        flex-direction: row!important;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, 0.175);
+        border-radius: 0.375rem;
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    }
+    .design-form-builder .design-switcher-panel {
+        width: 5.5rem!important;
+        flex-direction: row!important;
+        border-right: 1px solid rgba(0, 0, 0, 0.175);
+        border-bottom: 0;
+        border-radius: 0.375rem 3px 3px 0.375rem;
+        box-shadow: 0.125rem 0 0.25rem rgba(0, 0, 0, 0.075);
+        overflow: hidden;
+        padding-right: 10px;
+    }
+
+    .design-form-builder .design-switcher {
+        display: flex!important;
+        flex-wrap: wrap!important;
+        flex-direction: column!important;
+        border-radius: 0.375rem 0 0 0.375rem;
+        width: 100%!important;
+        height: 100%!important;
+    }
+    
+    .design-form-builder .nav-switcher { 
+        display: flex!important;
+        flex-wrap: wrap!important;
+        flex-direction: column!important;
+        border-radius: 0.375rem 0 0 0.375rem;
+        width: 100%!important;
+
+    }
+
+    .design-form-builder .nav-switcher .nav-link {
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    .design-form-builder .nav-switcher .nav-link img {
+        width: 100%!important;
+        height: auto!important;
+    }
+
+    .design-form-builder .design-switcher-panel.expanded .nav-switcher .nav-link {
+        padding: 1rem 2rem 1rem 1rem!important;
+    }
+
+    .design-form-builder .design-switcher-panel .nav-toggle {
+        flex: 1;
+        position: relative;
+        z-index: 2;
+        width: 10px;
+        height: 100%;
+        color: #fff;
+        font-weight: bold;
+        font-size: 8px;
+        background: #666;
+        border: 1px solid #333;
+        border-left-color: #666;
+        border-radius: 0 3px 3px 0;
+        -moz-transition: width .1s linear,right .1s linear;
+        -o-transition: width .1s linear,right .1s linear;
+        -webkit-transition: width .1s linear,right .1s linear;
+        transition: width .1s linear,right .1s linear;
+    }
+
+    .design-form-builder .design-switcher-panel .nav-toggle::before {
+        content: "⇆";
+        text-align: center;
+        margin-left: -3px;
+    }
+
+    .design-form-builder .design-switcher-panel:has(.nav-toggle:hover) {
+        width: 6rem!important;
+        padding-right: 18px!important;
+    }
+
+    .design-form-builder .design-switcher-panel .nav-toggle:hover {
+        background: #fff;
+        border: 1px solid #d7dde3;
+        border-left-color: #fff;
+        padding-left: 8px;
+        padding-right: 10px;
+        color: #333;
+    }
+
+    .design-form-builder .design-switcher-panel.expanded .nav-switcher .nav-link img {
+        width: 100%!important;
+        height: auto!important;
+    }
+
+    .design-form-builder .design-switcher-panel.expanded {
+        display: flex!important;
+        flex-wrap: wrap!important;
+        flex-direction: row!important;
+        width: 14.5rem!important;
+        height: 100%!important;
+        position: relative!important;
+        top: 0!important;
+        padding: 0!important;
+        padding-right: 14px!important;
+        overflow: hidden;
+    }
+
+    .design-form-builder .design-switcher-panel.expanded .design-switcher {
+        display: flex!important;
+        flex-wrap: wrap!important;
+        flex-direction: row!important;
+        height: 100%!important;
+        overflow: hidden;
+        overflow-y: auto!important;
+    }
+
+    .design-form-builder .design-switcher-panel.expanded .nav-switcher {
+        display: flex!important;
+        flex-wrap: wrap!important;
+        flex-direction: column!important;
+        overflow: hidden!important;
+    }
+
+    .design-form-builder .design-switcher-panel.expanded .nav-toggle {        
+        width: 10px!important;
+        height: 100%!important;
+        position: absolute!important;
+        right: 0!important;
+    }
+
+    .design-form-builder .design-switcher-panel.expanded:has(.nav-toggle:hover) {
+        width: 15.25rem!important;
+        padding-right: 26px!important;
+    }
+
+    .design-form-builder .design-switcher-panel.expanded .nav-toggle:hover {
+        padding-left: 10px;
+        padding-right: 12px;
+        background: #fff;
+        border: 1px solid #d7dde3;
+    }
+}
+
+.design-form-builder .design-window-panel {
+    padding: 0.5rem 1rem;
+    width: 100%;
+    min-height: 50vh;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+
+.design-form-builder .design-window-panel > * {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(1.5rem * .5);
+    padding-left: calc(1.5rem * .5);
+    margin-top: 1rem;
+    padding-bottom: calc(1.5rem * 1);
+}
+
+.design-form-builder .design-window-panel .design-form-panel {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+.design-form-builder .design-window-panel .design-preview-panel {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+.design-form-builder .design-preview-panel .design-preview-image img {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    padding: 0.5rem 1rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .design-form-builder .design-preview-panel .design-preview-image img {
+        width: 100%!important;
+        height: auto!important;
+    }
+}
+
+.design-form-builder .design-preview-panel .design-render-panel {
+    display: block;
+    padding: .5rem 1rem;
+}
+
+.design-form-builder .design-render-panel .render-button {
+    border-style: none;
+    display: block;
+    width: 100%;
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    user-select: none;
+    border: 1px solid transparent;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-appearance: button;
+    text-transform: none;
+    overflow: visible;
+    margin: 0;
+    font-family: inherit;
+}
+@media (max-width: 992px) {
+    .design-form-builder .design-preview-panel .design-render-panel {
+        width: 100%;
+        position: fixed!important;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 1rem;
+        background: #fff;
+        border-bottom: 1px solid #d7dde3;
+        box-shadow: 0 0 0.5rem rgba(13, 110, 253, 0.25);
+        z-index: 2;
+    }
+    .design-form-builder .design-preview-panel .design-render-panel {
+        padding: 1rem 5rem;
+    }
+    .design-form-builder .design-preview-panel .render-button {
+        width: 100%;
+        margin: 0;
+    }
+    footer {
+        padding-bottom: 5rem!important;
+    }
+}
+@media (max-width: 768px) {
+    .design-form-builder .design-preview-panel .design-render-panel {
+        padding: 1rem 3.5rem!important;
+    }
+}
+@media (max-width: 576px) {
+    .design-form-builder .design-preview-panel .design-render-panel {
+        padding: 1rem 2rem!important;
+    }
+}
+.design-form-builder .design-window-panel h2, h4 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+}
+
+.design-form-builder .design-window-panel .panel-title {
+    font-size: calc(1.325rem + .9vw);
+    margin-bottom: 1rem;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid #d7dde3;
+}
+
+.design-form-builder .design-window-panel .form-title {
+    margin-top: 1rem;
+    font-size: calc(1.275rem + .3vw);
+}
+
+@media (min-width: 992px) {
+    .design-form-builder .design-window-panel .design-form-panel {
+        flex: 0 0 auto;
+        width: 66.66666667%!important;
+    }
+    .design-form-builder .design-window-panel .design-preview-panel {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+        order: 6 !important;
+    }
+}
+
+.design-form-builder .design-window-panel .form-column {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(1rem * -1);
+    margin-right: calc(1rem * -.5);
+    margin-left: calc(1rem * -.5);
+}
+
+.design-form-builder .design-window-panel .form-column > * {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(1rem * .5);
+    padding-left: calc(1rem * .5);
+    margin-top: 1rem;
+}
+
+.design-form-builder .design-window-panel .form-column .col-start, 
+.design-form-builder .design-window-panel .form-column .col-end {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+@media (min-width: 576px) {
+    .design-form-builder .design-window-panel .form-column .col-start, 
+    .design-form-builder .design-window-panel .form-column .col-end {
+        flex: 0 0 auto;
+        width: 50%!important;
+    }
+}
+
+.design-form-builder .form-group hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+
+.design-form-builder .form-group .form-label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.design-form-builder .form-group .form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    margin: 0;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+    .design-form-builder .form-group .form-control {
+      transition: none;
+    }
+}
+
+.design-form-builder .form-group textarea.form-control {
+    min-height: calc(1.5em + (0.75rem + 2px));
+}
+
+.design-form-builder .form-group .form-control[type="file"] {
+    overflow: hidden;
+}
+.design-form-builder .form-group .form-control[type="file"]:not(:disabled):not([readonly]) {
+    cursor: pointer;
+}
+.design-form-builder .form-group .form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+.design-form-builder .form-group .form-control::-webkit-date-and-time-value {
+    height: 1.5em;
+}
+.design-form-builder .form-group .form-control::-moz-placeholder {
+    color: #6c757d;
+    opacity: 1;
+}
+.design-form-builder .form-group .form-control::placeholder {
+    color: #6c757d;
+    opacity: 1;
+}
+.design-form-builder .form-group .form-control:disabled,
+.design-form-builder .form-group .form-control[readonly] {
+    background-color: #e9ecef;
+    opacity: 1;
+}
+.design-form-builder .form-group .form-control::file-selector-button {
+    padding: 0.375rem 0.75rem;
+    margin: -0.375rem -0.75rem;
+    -webkit-margin-end: 0.75rem;
+    margin-inline-end: 0.75rem;
+    color: #212529;
+    background-color: #e9ecef;
+    pointer-events: none;
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    border-inline-end-width: 1px;
+    border-radius: 0;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+    .design-form-builder .form-group .form-control::file-selector-button {
+        transition: none;
+    }
+}
+.design-form-builder .form-group .form-control:hover:not(:disabled):not([readonly])::file-selector-button {
+    background-color: #dde0e3;
+}
+.design-form-builder .form-group .form-control::-webkit-file-upload-button {
+    padding: 0.375rem 0.75rem;
+    margin: -0.375rem -0.75rem;
+    -webkit-margin-end: 0.75rem;
+    margin-inline-end: 0.75rem;
+    color: #212529;
+    background-color: #e9ecef;
+    pointer-events: none;
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+    border-inline-end-width: 1px;
+    border-radius: 0;
+    -webkit-transition: color 0.15s ease-in-out,
+        background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+    .design-form-builder .form-group .form-control::-webkit-file-upload-button {
+        -webkit-transition: none;
+        transition: none;
+    }
+}
+.design-form-builder .form-group .form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
+    background-color: #dde0e3;
+}
+
+.stephanusdai-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2230%22%20height%3D%2230%22%20xml%3Aspace%3D%22preserve%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3CclipPath%20clipPathUnits%3D%22userSpaceOnUse%22%20id%3D%22g%22%3E%3Cpath%20d%3D%22M3.6%206.64a3.323%203.323%200%201%200%200-6.647%203.323%203.323%200%200%200%200%206.647%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2FclipPath%3E%3CclipPath%20clipPathUnits%3D%22userSpaceOnUse%22%20id%3D%22a%22%3E%3Cpath%20d%3D%22M3.6%207.08a3.6%203.6%200%201%200%200-7.2%203.6%203.6%200%200%200%200%207.2%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2FclipPath%3E%3CclipPath%20clipPathUnits%3D%22userSpaceOnUse%22%20id%3D%22c%22%3E%3Cpath%20d%3D%22M3.6%206.64a3.323%203.323%200%201%200%200-6.647%203.323%203.323%200%200%200%200%206.647%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2FclipPath%3E%3CclipPath%20clipPathUnits%3D%22userSpaceOnUse%22%20id%3D%22d%22%3E%3Cpath%20d%3D%22M3.6%206.64a3.323%203.323%200%201%200%200-6.647%203.323%203.323%200%200%200%200%206.647%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2FclipPath%3E%3CclipPath%20clipPathUnits%3D%22userSpaceOnUse%22%20id%3D%22e%22%3E%3Cpath%20d%3D%22M3.6%206.64a3.323%203.323%200%201%200%200-6.647%203.323%203.323%200%200%200%200%206.647%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2FclipPath%3E%3CclipPath%20clipPathUnits%3D%22userSpaceOnUse%22%20id%3D%22f%22%3E%3Cpath%20d%3D%22M3.6%206.64a3.323%203.323%200%201%200%200-6.647%203.323%203.323%200%200%200%200%206.647%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2FclipPath%3E%3CclipPath%20clipPathUnits%3D%22userSpaceOnUse%22%20id%3D%22b%22%3E%3Cpath%20d%3D%22M3.6%206.64a3.323%203.323%200%201%200%200-6.647%203.323%203.323%200%200%200%200%206.647%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2FclipPath%3E%3CclipPath%20clipPathUnits%3D%22userSpaceOnUse%22%20id%3D%22h%22%3E%3Cpath%20d%3D%22M3.6%206.64a3.323%203.323%200%201%200%200-6.647%203.323%203.323%200%200%200%200%206.647%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2FclipPath%3E%3CclipPath%20clipPathUnits%3D%22userSpaceOnUse%22%20id%3D%22i%22%3E%3Cpath%20d%3D%22M3.6%206.64a3.323%203.323%200%201%200%200-6.647%203.323%203.323%200%200%200%200%206.647%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2FclipPath%3E%3CclipPath%20clipPathUnits%3D%22userSpaceOnUse%22%20id%3D%22j%22%3E%3Cpath%20d%3D%22M3.6%206.64a3.323%203.323%200%201%200%200-6.647%203.323%203.323%200%200%200%200%206.647%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2FclipPath%3E%3CclipPath%20clipPathUnits%3D%22userSpaceOnUse%22%20id%3D%22k%22%3E%3Cpath%20d%3D%22M3.6%206.64a3.323%203.323%200%201%200%200-6.647%203.323%203.323%200%200%200%200%206.647%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2FclipPath%3E%3CclipPath%20clipPathUnits%3D%22userSpaceOnUse%22%20id%3D%22l%22%3E%3Cpath%20d%3D%22M3.6%206.64a3.323%203.323%200%201%200%200-6.647%203.323%203.323%200%200%200%200%206.647%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2FclipPath%3E%3CclipPath%20clipPathUnits%3D%22userSpaceOnUse%22%20id%3D%22m%22%3E%3Cpath%20d%3D%22M3.6%206.64a3.323%203.323%200%201%200%200-6.647%203.323%203.323%200%200%200%200%206.647%22%20clip-rule%3D%22evenodd%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M3.6%206.64a3.323%203.323%200%201%200%200-6.647%203.323%203.323%200%200%200%200%206.647zm3.6-3.16a3.6%203.6%200%201%201-7.2%200%203.6%203.6%200%200%201%207.2%200%22%20style%3D%22fill%3A%23025498%3Bfill-opacity%3A1%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%22%20transform%3D%22matrix%283.88889%200%200%20-3.88889%201.001%2028.533%29%22%20clip-path%3D%22url%28%23a%29%22%2F%3E%3Cpath%20d%3D%22M4.018%204.067A.543.543%200%200%200%204.088%204c-.026.106-.28.246-.4.24-.076-.004-.127-.037-.127-.037l.021-.032c.079-.118.197-.182.436-.104Zm-.326.12c-.028-.048.005-.11.06-.11.044%200%20.076.04.069.084a.559.559%200%200%200%20.196-.094c-.204-.052-.356.001-.4.109.022.01.048.013.075.01%22%20style%3D%22fill%3A%23025498%3Bfill-opacity%3A1%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%22%20transform%3D%22matrix%283.88889%200%200%20-3.88889%201.001%2028.533%29%22%20clip-path%3D%22url%28%23b%29%22%2F%3E%3Cpath%20d%3D%22M3.175%203.24c-.055.024-.075.039-.135.032-.112-.013-.097.042-.198.07a1.06%201.06%200%200%201-.1.024c-.042.005-.083-.001-.113.033-.015.018-.04.056-.069.084a.482.482%200%200%201%20.076-.164c.044-.071.081-.16.113-.236.132-.317.444-.211.583-.095.061.052.233.051.267.168-.203-.04-.313.033-.424.083Zm-.324-.04c.045-.011.093-.046.117-.052.025-.006.067.01.112.001.091-.017.12-.048.164-.059a.506.506%200%200%201%20.24.014%201.02%201.02%200%200%200-.495-.102c-.136.006-.218.117-.313.299.083-.055.098-.084.175-.102%22%20style%3D%22fill%3A%23025498%3Bfill-opacity%3A1%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%22%20transform%3D%22matrix%283.88889%200%200%20-3.88889%201.001%2028.533%29%22%20clip-path%3D%22url%28%23c%29%22%2F%3E%3Cpath%20d%3D%22M3.04%203.38c.066-.006.095.045.175.016.068-.025.082-.065.12-.062.055.003.208.054.106.295.05-.19-.051-.212-.11-.204-.062.008-.091.098-.166.124-.047.017-.056.01-.074-.008-.054-.056-.118-.046-.156.026-.007.013-.006.02-.018.032-.03.03-.058.03-.117.022-.058-.007-.153.088.117.197-.328-.102-.164-.211-.164-.255%200-.096.108-.009.178-.087.033-.037.068-.09.11-.095%22%20style%3D%22fill%3A%23025498%3Bfill-opacity%3A1%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%22%20transform%3D%22matrix%283.88889%200%200%20-3.88889%201.001%2028.533%29%22%20clip-path%3D%22url%28%23d%29%22%2F%3E%3Cpath%20d%3D%22M4.603%203.946c.001.015.017.065.017.065l-.23.025-.063.022c-.07.024-.073.043-.13.073-.067.036-.169.072-.29.116-.132.047-.31.088-.452.084-.213-.006-.163-.051-.362.095-.16.116-.354.198-.551.221-.022.003-.087.007-.087.007h-.172c-.028%200-.021-.025-.021-.057%200-.023.046-.029.045-.055l-.009-.185c-.007-.144.043-.201.131-.252.14-.08.229-.1.382-.124.083-.012.145-.005.223.083l.13.147c.027.03.055.066.116.031.022-.013.023-.02.026-.057l.014-.192c.012-.146.095-.204.215-.248.12-.044.224-.077.352-.092.088-.01.187-.019.23.07l.095.193c.042.085.028.073.146.04Zm-.453.16c.035-.017.05-.07.03-.139-.031-.1-.04-.135-.092-.22-.041-.065-.113-.072-.229-.054-.108.016-.27.06-.367.11-.071.037-.096.075-.08.153.023.117.024.155-.033.258-.028.05.03.07.057.072.234.024.513-.084.714-.18Zm-1.106.298c.045-.039.064-.077.04-.135a1.215%201.215%200%200%200-.102-.182c-.051-.074-.094-.082-.164-.073a.83.83%200%200%200-.38.128.396.396%200%200%200-.077.063c-.05.059-.038.175-.031.266.01.133.02.113.104.12.007%200%20.066.026.09.023.073-.006.175-.042.276-.083.057-.023.176-.07.244-.127%22%20style%3D%22fill%3A%23025498%3Bfill-opacity%3A1%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%22%20transform%3D%22matrix%283.88889%200%200%20-3.88889%201.001%2028.533%29%22%20clip-path%3D%22url%28%23e%29%22%2F%3E%3Cpath%20d%3D%22M3.011%204.306Zm-.356.167c.013-.13.138-.229.323-.178l.033.01c.007.004.011.009.011.015.007.122-.08.14-.17.16a.752.752%200%200%201-.168.015.1.1%200%200%201-.073-.03c.018.008.032.008.044.008Zm.158-.116c.045%200%20.073.048.054.088.087-.023.122-.047.108-.145-.182-.019-.293.077-.32.173a.87.87%200%200%200%20.117-.01c-.04-.037-.014-.106.04-.106%22%20style%3D%22fill%3A%23025498%3Bfill-opacity%3A1%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%22%20transform%3D%22matrix%283.88889%200%200%20-3.88889%201.001%2028.533%29%22%20clip-path%3D%22url%28%23f%29%22%2F%3E%3Cpath%20d%3D%22M3.604%204.346c.095-.011.129.034.219.018.138-.026.44-.11.484-.233%200%20.145-.27.262-.517.32-.094.022-.306%200-.393-.11.091.016.15.01.208.004%22%20style%3D%22fill%3A%23025498%3Bfill-opacity%3A1%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%22%20transform%3D%22matrix%283.88889%200%200%20-3.88889%201.001%2028.533%29%22%20clip-path%3D%22url%28%23g%29%22%2F%3E%3Cpath%20d%3D%22M4.823%203.41c-.085-.085-.103-.027-.149-.065-.024-.02%200-.07.031-.033.01.01.016.015.038.015.011%200%20.08.083.08.083%22%20style%3D%22fill%3A%23025498%3Bfill-opacity%3A1%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%22%20transform%3D%22matrix%283.88889%200%200%20-3.88889%201.001%2028.533%29%22%20clip-path%3D%22url%28%23h%29%22%2F%3E%3Cpath%20d%3D%22M2.77.098c.012.224.046.53.01.73-.008.042.024.077.049.108.062.078.172.196.217.275-.092.108-.15.228-.209.354l-.042.013a1.05%201.05%200%200%201-.345-.21c.004-.08-.003-.16.007-.237.01-.076.006-.116-.045-.176-.068-.082-.21-.411-.266-.53L2.114.343%202.068.221%202.034.135l-.05-.131-.105-.344-.004-.034-.082-.553c-.018-.097-.036-.196-.049-.294-.011-.088-.017-.18-.024-.27l-.029-.407c-.007-.101-.014-.275-.02-.376h.152c.015.192.14.534.208.682.069.151.146.305.204.46.147.392.324.744.5%201.116l.033.069.002.045%22%20style%3D%22fill%3A%23025498%3Bfill-opacity%3A1%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%22%20transform%3D%22matrix%283.88889%200%200%20-3.88889%201.001%2028.533%29%22%20clip-path%3D%22url%28%23i%29%22%2F%3E%3Cpath%20d%3D%22M3.324%201.009S3.04.434%202.91.179a9.318%209.318%200%200%201-.606-1.336c-.122-.325-.442-.876-.405-1.117.262.386.494.838.779%201.23.109.15.239.295.334.452.057.093.211.285.372.478l.09.11c.16.189.307.36.353.416.074.089.22.22.295.286.078.068.036.1.006.206-.021.073-.05.139-.082.207-.08.371-.167.616-.047%201a1.616%201.616%200%200%201-.106-.367c-.03-.2.093-.671.167-.845.022-.05-.014-.094-.05-.123a36.708%2036.708%200%200%201-.605-.597A3.2%203.2%200%200%201%203.253.01a9.846%209.846%200%200%201-.09-.105C3.044-.24%202.923-.39%202.88-.44c-.072-.087-.502-.706-.502-.706A13.789%2013.789%200%200%201%203.045.04c.284.567.5%201.11.447%201.304z%22%20style%3D%22fill%3A%23025498%3Bfill-opacity%3A1%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%22%20transform%3D%22matrix%283.88889%200%200%20-3.88889%201.001%2028.533%29%22%20clip-path%3D%22url%28%23j%29%22%2F%3E%3Cpath%20d%3D%22M.904-.865C.914-.36.953.427%201.01.979l.02.184.006.04c.031.234.08.5.145.698-.127-.18-.189-.414-.224-.6l-.02-.125-.015-.103a19.08%2019.08%200%200%201-.174-1.57c-.06.2-.116.641-.153.96-.006-.227%200-.87.141-1.175a18.215%2018.215%200%200%201-.008-.25l-.227.1.225-.201v-.298c-.346.07-.539.223-.539.521-.106-.32.26-.575.54-.637.002-.118.006-.243.01-.363a.878.878%200%200%200-.207-.055c-.066%200-.335-.08-.292-.102.038-.02.158.024.313.014.06-.003.138-.057.196-.066.005-.087.01-.164.017-.225h.2c.018.051-.073.728-.06%201.409%22%20style%3D%22fill%3A%23025498%3Bfill-opacity%3A1%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%22%20transform%3D%22matrix%283.88889%200%200%20-3.88889%201.001%2028.533%29%22%20clip-path%3D%22url%28%23k%29%22%2F%3E%3Cpath%20d%3D%22M5.385.353a14.066%2014.066%200%200%201-.3-1.222c-.017-.08-.06-.46-.087-.488-.048-.048-.1-.075-.1-.125%200-.039-.03-.084-.06-.13-.058-.087.073-.065.095-.043.021.022.08.109.094.087.015-.021.08-.174.095-.21.014-.037.073-.146.095-.175.021-.03.029-.095.021-.117a1.389%201.389%200%200%200-.182-.175c-.008-.007-.012-.017-.013-.029h.131c.007.003.191.16.217.211.062.125.25-.039.219.153-.008.044-.139.051-.197.102-.058.051-.065.124-.08.182-.015.058-.08.131-.175.16-.094.03-.022.11-.007.16.008.03.005.088.002.155-.008.263.085.512.136.77a61.603%2061.603%200%200%200%20.193.792%204.526%204.526%200%200%200%20.142.416c.071.142.157.464.269.56-.134.017-.342-.536-.442-.831L5.398.397%205.385.353%22%20style%3D%22fill%3A%23025498%3Bfill-opacity%3A1%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%22%20transform%3D%22matrix%283.88889%200%200%20-3.88889%201.001%2028.533%29%22%20clip-path%3D%22url%28%23l%29%22%2F%3E%3Cpath%20d%3D%22m1.583%201.21-.129-.128.129.127Zm.837%203.256c-.006-.044.009-.08.013-.106.003-.026.007-.031-.012-.067-.018-.036-.06-.087-.06-.088%200%200%20.038.028.068.064.046.057.017.122.019.137.014.07.08.084.06.147-.005.022-.01.05.03.095.025.027.028.049.037.067l.008.009c.018-.02.042-.013.068-.019.15-.032.283-.08.367-.181.036-.043.102-.088.153-.124-.024.166-.094.27-.229.307a1.07%201.07%200%200%201-.347.035.075.075%200%200%201%20.009.03c.027.089.058.186.07.273.02.048.062.106.073.146.026.09.03.122.11.194l.003.002c.03.03.082.057.076.004-.002-.012-.007-.018-.013-.025-.032-.042-.004-.055.04-.043.035.01.054.038.09.044.061.01.13-.035.174-.105-.024.069-.135.154-.208.115.013.009.026.017.037.02.05.016.092.02.136.008.113-.131.156-.299.465-.41a.659.659%200%200%200-.375.366c.15-.1.175-.194.387-.264-.214.087-.245.194-.383.286-.02.013-.016.004-.028.048a.758.758%200%200%201%20.056-.024.44.44%200%200%200-.023.046c.144-.058.3-.17.373-.236-.054.055-.205.19-.38.256a.15.15%200%200%200-.009.036.848.848%200%200%200%20.372-.245c-.07.116-.226.216-.371.267.042.035.345-.055.355-.204.015.03-.015.103-.07.156.064-.034.097-.13.112-.196.022-.099.019-.208.015-.33-.002-.11.14-.26.23-.319a.862.862%200%200%201%20.32-.118.522.522%200%200%201%20.026-.068c.056-.113.159-.24.28-.129-.136-.048-.193.054-.214.183.08-.01.162-.013.238-.013-.086.01-.167.021-.241.038a.86.86%200%200%200-.005.053.414.414%200%200%201%20.208.011.573.573%200%200%200-.209.006.789.789%200%200%200-.001.057.502.502%200%200%201%20.108-.023.694.694%200%200%200-.108.032l.001.036c.008.163-.006.054.105.006.225-.095.248-.414.21-.646L4.62%204.01s-.016-.05-.017-.065a.405.405%200%200%200-.003-.024.339.339%200%200%201-.06-.2%202.485%202.485%200%200%200-.035-.085c-.12-.28-.289-.293-.497-.445-.161-.118-.101-.315-.247-.451-.143-.134-.407-.16-.59-.117-.021.005-.108.096-.203.131-.136.05-.18-.03-.277.067-.13.13-.15.386-.236.61-.064.164-.031.31-.08.433-.067.165.032.233-.023.298-.01-.034%200-.067-.012-.102-.02-.057-.013-.075-.013-.138%200-.075.034-.094.034-.21%200-.035.005-.09.015-.109.01-.02%200-.059.01-.088.01-.03.025-.078.04-.118.025-.069.054-.233.078-.303.014-.044.024-.084.039-.118l.059-.137c.014-.034.044-.073.044-.073v-.145.002c-.053-.025-.07-.076-.082-.115a28.134%2028.134%200%200%200-.114-.1c-.04-.034-.138-.127-.138-.127s-.102-.02-.18-.04c-.08-.02-.113-.02-.192-.039-.078-.02-.127-.039-.191-.049-.064-.01-.152-.014-.22-.034-.069-.02-.147-.049-.191-.064-.044-.014-.142-.068-.187-.088-.044-.02-.147-.088-.186-.108-.039-.02-.068-.049-.093-.054C.848%201.801.79%201.801.77%201.782.757%201.77.722%201.736.694%201.704a.22.22%200%200%201-.037-.054c-.015-.04-.025-.064-.03-.093l-.016-.085a2.187%202.187%200%200%201-.023-.146c-.007-.07-.04-.255-.03-.304C.563.998.573.988.568.968.565.95.535.89.516.851.494.811.484.773.474.743.465.713.436.679.426.65.416.62.421.61.406.586.393.562.368.498.354.464.338.429.343.39.333.371.323.35.294.337.294.307s0-.04-.015-.054C.264.24.28.204.27.184.26.166.24.142.236.101a.408.408%200%200%200-.068-.186C.152-.109.152-.119.127-.188.104-.256.079-.305.065-.368.049-.434.029-.478.024-.527A.315.315%200%200%200%200-.639c-.043-.085-.014-.126-.025-.2-.004-.035-.034-.069-.038-.113-.006-.044-.025-.054-.03-.098-.016-.14-.009-.129-.044-.27-.01-.039-.015-.102-.02-.141-.005-.04-.03-.094-.034-.133-.005-.039-.044-.108-.044-.147%200-.04.005-.093%200-.137-.005-.044-.015-.103-.005-.152.01-.049.025-.112.03-.167a.303.303%200%200%200-.007-.077h.074c.015.096-.006.16-.026.258-.007.038.002.092.006.13.005.042.002.083%200%20.125.179.084.404.186.51.186.16%200%20.255-.014.35-.095-.024.106-.316.162-.531.386-.077.08-.097.197-.157.324-.003.013.032.068.039.11.01.079-.015.114.017.179.027.053.026.097.034.15.007.044.025.091.036.135.013.06.04.117.061.174.093-.606.188-.846.479-.985C.413-1.05.296-.454.26-.067c0%200%20.035.065.046.16.003.021.018.04.028.059.013.027.01.043.01.066a.125.125%200%200%201%20.022.08C.372.314.402.31.412.404c.002.01.003.022.007.031C.435.47.45.518.47.55c.032.054.005.048.043.11.048.079.034.094.066.16.029.055.072.124.062.18-.01.052-.016.006-.007.105l.026.215c.002.023.006.046.01.069l.029.156c.004.027.016.055.026.08a.06.06%200%200%200%20.007.012c.019.026.062.068.083.089.018.005.054.006.071.01.045.009.073.04.112.06l.183.107.18.085c.062.02.124.045.188.063.066.019.142.022.211.032.067.01.132.034.198.05l.203.043-.147-.104s-.102-.022-.196-.131c-.095-.109-.226-.218-.284-.27-.058-.05-.146-.108-.171-.126-.064-.046-.025-.075-.004-.179.011-.054.095-.284.095-.284L1.287.93%201.214.863v-.08c.003-.118.007-.334.007-.422%200-.124.036-.764.05-.939.036-.418.11-.843.146-1.332.01-.12.017-.242.024-.364h.152c.024.364.059.905.08%201.063.024.196.099.534.13.844.026.257.034.503.05.697.005.054.01.103.017.148.006.04.012.076.02.108.022.088.139.597.16.677.022.08.103.32.131.386.03.065.197.393.197.393-.107-.29-.175-.536-.276-.837.288.137.298.31.713.458.016-.035.033-.028.061-.01.07-.148.113-.246.19-.35.038-.051.093-.107.15-.167.053-.058.096-.069.116-.033a1.816%201.816%200%200%200%20.16.24l.001.002.043.046a.866.866%200%200%201%20.094.134c.032.059.08.114.12.175.044.07.08.144.117.215.03.06.065.108.1.155l.055.074a1.642%201.642%200%200%200-.024-.033c-.12-.384-.033-.629.047-1l.017-.038a101.525%20101.525%200%200%200%20.296.11c.094.036.153.073.19.095.035.022.057.036.039.102-.018.065-.047.269-.062.35l-.105.437c.035-.022.026-.028.054-.04.07-.031.147-.064.215-.1.126-.069.238-.132.373-.185.135-.052.422-.162.54-.23a.973.973%200%200%200%20.29-.226c.015-.007.013-.038.107-.047l.054-.054c-.034-.01-.105-.103-.16-.211a3.163%203.163%200%200%201-.117-.27c-.039-.1-.068-.183-.08-.21a4.502%204.502%200%200%201-.022-.057c-.132-.33-.237-.673-.378-1.035.075.165.257.53.4.837.06.125.111.241.15.328.035.074.06.126.076.145.069.081.17.12.239.143l.002-.004a.559.559%200%200%201%20.04-.061C6.216.874%206.098.636%206.193.52c-.008.11.058.277.073.255l.099-.125.026-.073S6.308.303%206.2.201c-.11-.102-.467-.51-.467-.51s-.218-.203-.247-.262c-.03-.058-.24-.233-.24-.233s.145.03.21.102c.066.073.139.16.219.233.08.073.291.313.378.393.088.08.16.175.226.19.024.004.582-.634-.546-1.398C6.89-.636%206.38.23%206.388.296c.015.101.077.135.077.135l-.06.118c.092-.17.066-.13.102-.29l.048-.206c.026-.146.029-.275.04-.423.012-.138.064-.274.095-.408.022-.09.045-.181.07-.271.068-.257.055-.207.086-.465l.029-.379.046-.34a.158.158%200%200%200%20.002-.04h.073c0%20.02%200%20.04-.004.057-.015.064-.045.26-.045.323l-.059.627c-.01.054-.038.162-.058.236-.02.073-.044.166-.069.27-.024.102-.083.274-.093.396l-.024.318a1.794%201.794%200%200%201-.04.216%202.352%202.352%200%200%200-.049.22.932.932%200%200%201-.088.196c-.03.054-.03.079-.039.098-.01.02-.074.089-.103.133-.03.044-.03.073-.064.117a.446.446%200%200%200-.068.128c-.01.034-.03.039-.024.083a.323.323%200%200%201%200%20.063.165.165%200%200%201-.03.089c-.03.034-.074.083-.098.103-.025.019-.064.005-.083.024-.132.131-.14.145-.319.25a2.627%202.627%200%200%201-.323.147c-.201.083-.21.078-.328.132-.118.054-.201.103-.265.138-.063.034-.22.102-.22.102s-.03.03-.06.044l-.072.04s-.084.103-.094.132c-.018.055-.074.17-.127.206-.026.017-.033.019-.038.032a1.46%201.46%200%200%200-.016.11l.059.122c.014.03.132.216.152.25.02.034.058.088.073.108.015.02.034.024.04.005.004-.02.019-.059.039-.074.02-.014.044-.049.078-.049s.074.005.113.04c.083.073.15.157.22.24.03.034.088.088.113.112a.64.64%200%200%201%20.103.138c.02.043.029.068.029.127%200%20.058-.01.078-.024.098-.015.02-.054.068-.084.068-.03%200-.102-.004-.103-.004.053.035.023.07.06.097.019.015.019.054.029.069l.107.138c.02.015.044.028.06.053.024.04.078.181.087.24.1.593-.279%201.435-.896%201.599l-.083.018c-.124.02-.206-.03-.378.005-.161.032-.532.131-.712.024-.12-.071-.045-.106-.081-.166-.075-.125-.047-.002-.133-.216-.026-.067-.145-.182-.171-.304-.02-.088-.086-.208-.116-.284l-.036-.137-.036-.179c-.008-.037-.018-.077-.019-.114-.001-.016-.002-.029-.014-.04-.02-.02-.015-.03-.054-.04-.026-.006-.051-.033-.063-.047-.027-.034-.014-.068-.011-.113%200%200-.02-.03-.024-.075zM1.583%201.21zm.795.832c-.383-.487-.55-.975-.636-1.482L1.72.41c-.078-.568-.071-1.161-.164-1.802C1.48-.777%201.435-.09%201.49.562a5.728%205.728%200%200%200%20.093.648c.055.053.11.106.133.126.05.044.24.298.298.364.058.065.364.342.364.342Zm1.78%202.54c-.047.02-.15.084-.167.164a.548.548%200%200%201%20.224-.134.89.89%200%200%201%20.012-.055%201.064%201.064%200%200%200-.07.024Zm-.153-1.873c-.023-.08-.042-.168-.135-.238-.04-.029-.355-.252-.604-.436-.117-.087-.206-.166-.271-.221-.028.032-.101.053-.151.065-.004.073-.004.156-.007.192-.015.14-.082.213-.124.357a1.4%201.4%200%200%200-.029.281.294.294%200%200%201%20.145-.107c.062-.024.152-.049.233-.065.128-.026.236-.026.365-.015.221.02.371.08.578.187Zm-.838%202.723c-.106.017-.161-.041-.136.014.022.025.067.043.073.04a.457.457%200%200%200%20.063-.054Zm1.044-.801c-.094.034-.179.091-.216.176a.323.323%200%200%201%20.192-.142.379.379%200%200%200-.194.185c.04-.063.064-.093.117-.118-.054.043-.07.069-.08.103a.463.463%200%200%201%20.167-.127l.014-.077Zm-.017.1a.613.613%200%200%200-.173.169c-.002.026%200%20.047.013.035a.378.378%200%200%200%20.097-.14c-.006.045-.06.242-.144.22.085.08.173-.197.18-.255.005.077-.039.176-.073.256a.679.679%200%200%200%20.1-.284ZM.045-1.21c.03-.034.053-.127.12-.211%200%200-.16-.131-.21-.16a.674.674%200%200%201-.083-.06l.023.092c.035.11.018.131.038.213l.032.146c.029.005.055.01.08-.02zM5.932.949a.57.57%200%200%200%20.084.175c.01.014.054.068.074.11.013-.043.003-.076.005-.112a.139.139%200%200%201%20.016-.057l.023-.055A1%201%200%200%201%205.93.921c-.004-.002-.003.01.002.028Zm-1.53%202.337H4.4h.002zm.267-.077a.172.172%200%200%200-.126-.06c-.035%200-.083.047-.098.083-.013.033-.029.057-.043.054l-.01.015c.089.072.117.085.132.08.017-.01.023-.038.081-.022.032.01.042.059.087.07.046.01.112.05.128.1.05.125-.097.09.016.29.002.004.037.068.064.068.036%200%20.102.015.138%200%20.01-.01.014-.022.004-.032-.053.014-.095-.052-.08-.117.042-.191-.127-.25-.132-.347l-.161-.182%22%20style%3D%22fill%3A%23025498%3Bfill-opacity%3A1%3Bfill-rule%3Aevenodd%3Bstroke%3Anone%22%20transform%3D%22matrix%283.88889%200%200%20-3.88889%201.001%2028.533%29%22%20clip-path%3D%22url%28%23m%29%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.sdailover-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xml%3Aspace%3D%22preserve%22%20width%3D%2230%22%20height%3D%2230%22%20style%3D%22shape-rendering%3AgeometricPrecision%3Btext-rendering%3AgeometricPrecision%3Bimage-rendering%3AoptimizeQuality%3Bfill-rule%3Aevenodd%3Bclip-rule%3Aevenodd%22%3E%3Cdefs%3E%3Cstyle%3E.fil2%7Bfill%3A%232a579a%7D%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22Layer_x0020_1%22%3E%3Cg%20id%3D%22_3186398213968%22%3E%3Cpath%20d%3D%22M5.73%2022.77c16.74-9.44%209.9-16.66%203.96-14.38-1.92.74-2.6.18-2.48-.65.24-1.64%203.34-3.55%205.85-4.01%206.4-1.17%209.33%205.56%205.58%2011.67-2.67%204.34-7.98%205.56-12.91%207.37z%22%20style%3D%22fill%3A%23f58634%3Bfill-rule%3Anonzero%22%2F%3E%3Cpath%20d%3D%22M9.46%204.25c-6.44%203.14-3.54%205.62-.86%207.36%201.7%201.11%202.49%202.37%202.58%203.66.4%205.56-6.99%204.88-10.01%2011.94-1.36-3.57%206.65-8.73%202.21-12.32C-.89%2011.43.27%204.07%209.46%204.25z%22%20style%3D%22fill%3A%232a579a%3Bfill-rule%3Anonzero%22%2F%3E%3Cpath%20d%3D%22M5.55%203.78C13.37.73%2019.14.89%2022.76%202.82c1.98%201.06.82.45%202.28-.75.93-.77%202.33-.81%203.96-.09-2.87%201.73-2.6%204.49-2.49%205.16.52%203.47-.65%207.48-4.21%2010.89-4.36%204.17-13.19%203.85-20.99%2010.55%204.11-5.04%2011.63-7%2017.04-9.93%204.14-2.25%204.78-6.25%204.87-8.88.22-6.4-6.8-8.99-17.67-5.99zm20.33-1.34c.15-.09.31-.05.34.08.03.13-.07.3-.23.38-.15.09-.31.05-.34-.08-.03-.13.07-.3.23-.38z%22%20class%3D%22fil2%22%2F%3E%3Cpath%20d%3D%22M29%201.98c-1.23%201.2-1.04%202.79-.6%204.58%202.44%2010.01-6.58%2015.05-13.72%2015.62%206.35-1.41%2015.07-5.82%2013.1-15.03-.45-2.09-.44-3.94%201.22-5.17z%22%20class%3D%22fil2%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+}
+
+footer {
+    z-index: 1;
+    position: relative;
+    background-color: #fff;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer .supportby {
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+footer .copyright {
+    display: inline-block;
+    margin: 0 auto;
+}
+footer .copyright .content {
+    align-items: center !important;
+    display: flex !important;
+    flex: 0 0 auto;
+}
+
+footer .copyright .logo {
+    margin-bottom: 1rem !important;
+    text-decoration: none !important;
+    line-height: 1 !important;
+    margin-right: .5rem !important;
+}
+
+footer .copyright .author {
+    margin-bottom: 1rem !important;
+    line-height: 1 !important;
+    text-align: left;
+    color: rgba(33, 37, 41, 0.75) !important;
+}
