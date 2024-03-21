@@ -1,7 +1,9 @@
 {
     "version": 2,
+    "functions": {
+        "/*.php": { "runtime": "vercel-php@0.3.5" }
+    },
     "builds": [
-        { "src": "/*.php", "use": "vercel-php@0.3.5" },
         { "src": "/**", "use": "@vercel/static" }
     ],
     "routes": [
@@ -24,6 +26,7 @@
         "APP_NAME": "Vercel Php Wedding Card Builder ",
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://weddingcardbuilderphp-wiefunkdai.vercel.app"
+        "APP_URL": "https://weddingcardbuilderphp-wiefunkdai.vercel.app",
+        "VERCEL_PHP_EXTENSIONS": "json,gd"
     }
 }
