@@ -3,7 +3,7 @@
     "builds": [
         { 
             "src": "/*.php", 
-            "use": "vercel-php@0.3.5",
+            "use": "vercel-php@0.7.0",
             "config": {
                 "php.ini": {
                     "extension": "gd"
@@ -18,6 +18,10 @@
         {
             "src": "/assets/(css|images)/(.*)",
             "dest": "assets/$1/$2"
+        },
+        {
+            "src": "/info.php",
+            "dest": "/info.php"
         },
         {
             "src": "/builder.php",
