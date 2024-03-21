@@ -28,7 +28,7 @@ Terms of the following https://stephanusdai.web.id/p/license.html
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
     <meta name="author" content="Stephanus Bagus Saputra">
-    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.css" />
 </head>
 <body>
 <header class="navbar">
@@ -54,22 +54,22 @@ Terms of the following https://stephanusdai.web.id/p/license.html
                 <ul class="nav-switcher">
                     <li class="nav-item">
                         <button class="nav-link active" data-value="0" title="Dark Wedding Card">
-                            <img alt="Dark Wedding Card" src="assets/images/thumbnails/design-dark.jpg"/>
+                            <img alt="Dark Wedding Card" src="./assets/images/thumbnails/design-dark.jpg"/>
                         </button>
                     </li>
                     <li class="nav-item">
                         <button class="nav-link" data-value="1" title="Pink Wedding Card">
-                            <img alt="Pink Wedding Card" src="assets/images/thumbnails/design-pink.jpg"/>
+                            <img alt="Pink Wedding Card" src="./assets/images/thumbnails/design-pink.jpg"/>
                         </button>
                     </li>
                     <li class="nav-item">
                         <button class="nav-link" data-value="2" title="Blue Wedding Card">
-                            <img alt="Blue Wedding Card" src="assets/images/thumbnails/design-blue.jpg"/>
+                            <img alt="Blue Wedding Card" src="./assets/images/thumbnails/design-blue.jpg"/>
                         </button>
                     </li>
                     <li class="nav-item">
                         <button class="nav-link" data-value="3" title="Purple Wedding Card">
-                            <img alt="Purple Wedding Card" src="assets/images/thumbnails/design-purple.jpg"/>
+                            <img alt="Purple Wedding Card" src="./assets/images/thumbnails/design-purple.jpg"/>
                         </button>
                     </li>
                 </ul>
@@ -80,7 +80,7 @@ Terms of the following https://stephanusdai.web.id/p/license.html
             <div class="design-preview-panel">
                 <h2 class="panel-title">Preview</h2>
                 <div class="design-preview-image">
-                    <img id="renderPreview" alt="Render Preview" src="assets/images/thumbnails/design-dark.jpg"/>
+                    <img id="renderPreview" alt="Render Preview" src="./assets/images/thumbnails/design-dark.jpg"/>
                 </div>
                 <div class="design-render-panel">
                     <button id="RenderCard" class="render-button" type="submit">Render</button>
@@ -140,12 +140,12 @@ Terms of the following https://stephanusdai.web.id/p/license.html
     <footer>
         <div class="supportby">
             <a href="https://opencollective.com/wiefunkdai" target="_blank">
-                <img alt="StephanusDai OpenCollective" height="48" src="assets/images/supportby-button.png" title="Thanks for Your Donation">
+                <img alt="StephanusDai OpenCollective" height="48" src="./assets/images/supportby-button.png" title="Thanks for Your Donation">
             </a>
         </div>
         <div class="authorby">
             <a href="https://stephanusdai.web.id" target="_blank">
-                <img alt="StephanusDai Blog" height="48" src="assets/images/authorwrittenby.png" title="Author by Stephanus Bagus Saputra">
+                <img alt="StephanusDai Blog" height="48" src="./assets/images/authorwrittenby.png" title="Author by Stephanus Bagus Saputra">
             </a>
         </div>
         <div class="copyright">
@@ -263,7 +263,7 @@ Terms of the following https://stephanusdai.web.id/p/license.html
                     }
                 }
                 var data = new FormData(weddingForm);
-                httpRequest.open('POST', 'builder.php');
+                httpRequest.open('POST', './builder.php');
                 httpRequest.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
                 httpRequest.send(data);
             }
