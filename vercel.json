@@ -1,0 +1,26 @@
+{
+    "version": 2,
+    "builds": [
+        { "src": "/index.php", "use": "vercel-php@0.3.5" },
+        { "src": "/builder.php", "use": "vercel-php@0.3.5" },
+        { "src": "/assets/**", "use": "@vercel/static" }
+    ],
+    "routes": [
+        { "src": "/favicon.ico", "dest": "favicon.ico" },
+        { "src": "/robots.txt", "dest": "robots.txt" },
+        {
+            "src": "/(css|images)/(.*)",
+            "dest": "assets/$1/$2"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/index.php"
+        }
+    ],
+    "env": {
+        "APP_NAME": "Vercel Php Wedding Card Builder ",
+        "APP_ENV": "production",
+        "APP_DEBUG": "true",
+        "APP_URL": "https://weddingcardbuilderphp-wiefunkdai.vercel.app"
+    }
+}
