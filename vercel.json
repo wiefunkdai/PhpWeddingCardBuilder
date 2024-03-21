@@ -12,6 +12,10 @@
             "dest": "assets/$1/$2"
         },
         {
+            "src": "/builder.php",
+            "dest": "/builder.php"
+        },
+        {
             "src": "/(.*)",
             "dest": "/index.php"
         }
