@@ -1,7 +1,15 @@
 {
     "version": 2,
     "builds": [
-        { "src": "/*.php", "use": "vercel-php@0.3.5" },
+        { 
+            "src": "/*.php", 
+            "use": "vercel-php@0.3.5",
+            "config": {
+                "php.ini": {
+                    "extension": "gd"
+                }
+            }
+        },
         { "src": "/**", "use": "@vercel/static" }
     ],
     "routes": [
